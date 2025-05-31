@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: employee_count_per_department
+    description: "The number of employees per department"
+    columns:
+      - name: department_name
+        description: "The name of the department"
+      - name: total_employees
+        description: "The number of employees per department"
