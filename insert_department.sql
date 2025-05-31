@@ -6,4 +6,5 @@ VALUES
     ('HR'),
     ('Marketing'),
     ('Sales'),
-    ('Accounting');
+    ('Accounting'),
+    ('Legal');
