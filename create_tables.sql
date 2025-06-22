@@ -15,4 +15,5 @@ CREATE TABLE employee (
     CONSTRAINT pk_employee PRIMARY KEY (employee_id),
     CONSTRAINT fk_department_id FOREIGN KEY (department_id)
         REFERENCES department(department_id)
+        ON DELETE RESTRICT;
 );
