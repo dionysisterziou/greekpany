@@ -2,7 +2,9 @@ CREATE TABLE department (
     department_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
     department_name VARCHAR(20) NOT NULL,
     CONSTRAINT pk_department PRIMARY KEY (department_id)
-);
+) 
+ENGINE = InnoDB
+DEFAULT CHARSET = utf8mb4;
 
 CREATE TABLE employee (
     employee_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -16,4 +18,6 @@ CREATE TABLE employee (
     CONSTRAINT fk_department_id FOREIGN KEY (department_id)
         REFERENCES department(department_id)
         ON DELETE RESTRICT
-);
+) 
+ENGINE = InnoDB
+DEFAULT CHARSET = utf8mb4;
