@@ -4,23 +4,23 @@ UNION ALL
 
 SELECT column_structure.text
 FROM (
-	SELECT 
-		CONCAT(
-			'    ', column_name, ' ', UPPER(column_type),
+    SELECT 
+        CONCAT(
+            '    ', column_name, ' ', UPPER(column_type),
         CASE
-			WHEN is_nullable = 'NO' THEN ' NOT NULL'
+            WHEN is_nullable = 'NO' THEN ' NOT NULL'
             ELSE ''
-		END,
+        END,
         CASE
             WHEN extra IS NOT NULL THEN CONCAT(' ', UPPER(extra))
             ELSE ''
-		END,
+        END,
         ','
-	) text
+    ) text
     FROM information_schema.columns
     WHERE table_schema = 'greekmpany'
-		AND table_name = 'department'
-	ORDER BY ordinal_position
+        AND table_name = 'department'
+    ORDER BY ordinal_position
 ) AS column_structure
 
 UNION ALL
