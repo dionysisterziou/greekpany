@@ -1,2 +1,3 @@
-# greekmpany
-SQL schema for a fictional Greek company
+# Greekmpany
+
+Greekmpany is a small example project. The repository includes SQL scripts for creating and populating tables, a dbt project and a sample Power BI dashboard.
