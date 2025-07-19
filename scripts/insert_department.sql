@@ -1,10 +1,10 @@
 INSERT INTO department (
-    department_name
+  department_name
 ) 
 VALUES
-    ('IT'),
-    ('HR'),
-    ('Marketing'),
-    ('Sales'),
-    ('Accounting'),
-    ('Legal');
+  ('IT'),
+  ('HR'),
+  ('Marketing'),
+  ('Sales'),
+  ('Accounting'),
+  ('Legal');
