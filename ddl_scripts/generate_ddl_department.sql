@@ -6,7 +6,7 @@ SELECT column_structure.text
 FROM (
   SELECT 
     CONCAT(
-      '    ', column_name, ' ', UPPER(column_type),
+      '  ', column_name, ' ', UPPER(column_type),
       CASE
         WHEN is_nullable = 'NO' THEN ' NOT NULL'
         ELSE ''
@@ -26,7 +26,7 @@ FROM (
 UNION ALL
 
 SELECT CONCAT(
-  '    CONSTRAINT pk_department PRIMARY KEY (',
+  '  CONSTRAINT pk_department PRIMARY KEY (',
   (
     SELECT column_structure.text
     FROM (

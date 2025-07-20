@@ -29,7 +29,7 @@ CREATE TABLE employee_salary (
   CONSTRAINT pk_employee_salary PRIMARY KEY (id),
   CONSTRAINT fk_employee_id FOREIGN KEY (employee_id)
     REFERENCES employee(id)
-	ON DELETE RESTRICT
+	ON DELETE CASCADE
 )
 ENGINE = InnoDB
 DEFAULT CHARSET = utf8mb4;
