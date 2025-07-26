@@ -18,7 +18,7 @@ FROM (
       ','
     ) text
   FROM information_schema.columns
-  WHERE table_schema = 'greekmpany'
+  WHERE table_schema = 'greekpany'
     AND table_name = 'department'
   ORDER BY ordinal_position
 ) AS column_structure
@@ -39,7 +39,7 @@ SELECT CONCAT(
         ')'
       ) AS text
       FROM information_schema.key_column_usage
-      WHERE table_schema = 'greekmpany'
+      WHERE table_schema = 'greekpany'
         AND table_name = 'department'
         AND constraint_name = 'PRIMARY'
       ORDER BY ordinal_position
@@ -47,7 +47,7 @@ SELECT CONCAT(
   )
 )
 FROM information_schema.table_constraints
-WHERE table_schema = 'greekmpany'
+WHERE table_schema = 'greekpany'
   AND table_name = 'department'
   AND constraint_type = 'PRIMARY KEY'
 

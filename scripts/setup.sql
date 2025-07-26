@@ -1,4 +1,4 @@
-CREATE DATABASE greekmpany
+CREATE DATABASE greekpany
   CHARACTER SET utf8mb4;
   
-USE greekmpany;
+USE greekpany;
