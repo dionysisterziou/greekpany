@@ -1,16 +1,11 @@
 {{ config(materialized='view') }}
 
 WITH department AS (
-  SELECT
-    id,
-    department_name
-  FROM greekpany.department
+  SELECT * FROM {{ ref('stg_department') }}
 ),
+
 employee AS (
-  SELECT
-    id,
-    department_id
-  FROM greekpany.employee
+  SELECT * FROM {{ ref('stg_employee') }}
 ),
 
 final AS (
